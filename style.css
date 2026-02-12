@@ -83,11 +83,23 @@ article {
         transition:
           background-color 0.3s ease,
           color 0.3s ease;
-        &:active {
+        &:active,
+        &:hover {
           color: var(--color-grey-900);
           background-color: var(--color-green);
         }
       }
     }
+  }
+}
+
+footer {
+  .attribution {
+    margin-block-start: 1rem;
+    font-size: 11px;
+    text-align: center;
+  }
+  .attribution a {
+    color: hsl(228, 45%, 44%);
   }
 }
