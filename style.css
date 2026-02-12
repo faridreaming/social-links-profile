@@ -22,6 +22,7 @@
 body {
   font-family: 'Inter', sans-serif;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100dvh;
@@ -32,12 +33,13 @@ body {
 }
 
 main {
-  display: contents;
+  display: flex;
+  justify-content: center;
 }
 
 article {
   background-color: var(--color-grey-800);
-  padding: 2.5rem;
+  padding: clamp(1.5rem, 5vw, 2.5rem);
   border-radius: 0.75rem;
   width: clamp(19.4375rem, 87.2%, 24rem);
   display: flex;
@@ -78,6 +80,9 @@ article {
         font-weight: 700;
         padding: 0.75rem;
         border-radius: 0.5rem;
+        transition:
+          background-color 0.3s ease,
+          color 0.3s ease;
         &:active {
           color: var(--color-grey-900);
           background-color: var(--color-green);
